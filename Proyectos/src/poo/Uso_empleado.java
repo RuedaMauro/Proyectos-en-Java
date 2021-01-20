@@ -26,13 +26,14 @@ public class Uso_empleado {
                 " Fecha de alta: " + empleado3.dameFechaContrato());
 */
 
-
-        Empleado[] misEmpleados = new Empleado[3];
+        Jefatura jefe_RRHH= new Jefatura("Calamardo", 30000,2000,9,10);
+        jefe_RRHH.estableceIncentivo(9833);
+        Empleado[] misEmpleados = new Empleado[4];
         // para usar varios tipos de variable primero crear la clase y despues al array pasarle los parametros
         misEmpleados[0]= new Empleado("Mauro Rueda",20000,2002,10,5);
         misEmpleados[1]= new Empleado("Camilo Robles", 56000, 2001,4,18);
         misEmpleados[2]= new Empleado("Rodrigo Lima", 15000, 2010,7,3);
-
+        misEmpleados[3]= jefe_RRHH; // polimorfismo en accion. Principio de sustitucion
         /*
         for(int i=0; i<3; i++){
             misEmpleados[i].aumentoDeSueldo(5);

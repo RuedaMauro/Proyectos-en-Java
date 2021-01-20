@@ -55,3 +55,11 @@ package poo;
         private double incentivo;
 
     }
+
+    class Director extends Jefatura{
+
+        public Director(String nombre, double sue, int agno, int mes, int dia){
+            super(nombre,sue,agno,mes,dia);
+
+        }
+    }
