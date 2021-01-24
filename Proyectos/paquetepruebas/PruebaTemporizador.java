@@ -4,7 +4,7 @@ import java.awt.event.*;
 import java.util.*;
 import javax.swing.Timer;
 import java.awt.Toolkit;
-
+// Clases internas y interfaces
 public class PruebaTemporizador {
 
     public static void main(String[] args) {
