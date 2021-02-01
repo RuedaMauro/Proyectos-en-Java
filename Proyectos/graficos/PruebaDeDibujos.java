@@ -40,7 +40,6 @@ class LaminaConDibujo extends JPanel {
 
         try {
             imagen = ImageIO.read(miImagen);
-
         /*
         g.drawRect(50,50,200,200); // funcion para dibujar dentro de la lamina
         */
@@ -52,5 +51,4 @@ class LaminaConDibujo extends JPanel {
 
     }
     private Image imagen; // variable de tipo imagen
-
 }
