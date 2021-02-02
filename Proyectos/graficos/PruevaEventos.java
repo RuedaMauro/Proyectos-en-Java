@@ -22,22 +22,28 @@ class MarcoConBotones extends JFrame{
     }
 }
 
-class LaminaConBotones extends JPanel implements ActionListener {
+class LaminaConBotones extends JPanel{
 
     JButton botonAzul = new JButton("Azul");  // contructor de botonoes
     JButton botonRojo = new JButton("Rojo");  // contructor de botonoes
     JButton botonAmarillo = new JButton("Amarillo");  // contructor de botonoes
-    public LaminaConBotones(){
+
+    public LaminaConBotones() {
 
         add(botonAzul);
         add(botonRojo);
         add(botonAmarillo);
 
-        botonAzul.addActionListener(this);
-        botonAmarillo.addActionListener(this);
-        botonRojo.addActionListener(this);
-    }
+        ColorFondo Amarillo = new ColorFondo(Color.YELLOW);
+        ColorFondo Rojo = new ColorFondo(Color.RED);
+        ColorFondo Azul = new ColorFondo(Color.BLUE);
 
+        botonAzul.addActionListener(Azul);
+        botonAmarillo.addActionListener(Amarillo);
+        botonRojo.addActionListener(Rojo);
+
+
+/*
     public void actionPerformed(ActionEvent e){
 
         Object botonPulsado = e.getSource();
@@ -54,5 +60,20 @@ class LaminaConBotones extends JPanel implements ActionListener {
 
 
     }
+*/
+
+    }
+
+    private class ColorFondo implements ActionListener {
+        public ColorFondo(Color c) {
+            colorDeFondo = c;
+        }
+
+        public void actionPerformed(ActionEvent e) {
+            setBackground(colorDeFondo);
+        }
+        private Color colorDeFondo;
+    }
 
 }
+
