@@ -2,6 +2,15 @@ package poo;
 
     class Empleados{
 
+        public static String dameIdSiguiente(){
+            return "id siguiente: " + IdSiguiente;
+        }
+
+        private final String nombre; // es una forma de evitar que se cambie el valor de una variable y ahora sea una constante de uso final
+        private String seccion;
+        private int Id;
+        private static int IdSiguiente=1;
+
         public Empleados(String nom){
             nombre = nom;
             seccion = "Administracion";
@@ -24,15 +33,6 @@ package poo;
             this.nombre = nombre;  // lo converti en una constante
         }
         */
-
-        public static String dameIdSiguiente(){
-            return "id siguiente: " + IdSiguiente;
-        }
-
-        private final String nombre; // es una forma de evitar que se cambie el valor de una variable y ahora sea una constante de uso final
-        private String seccion;
-        private int Id;
-        private static int IdSiguiente=1;
     }
 
 
